@@ -11,16 +11,8 @@
     font-family: 'Mooli', sans-serif;
     font-family: 'Poppins', sans-serif;
     }
-    /* * {
-        font-family: "ElMessiri";
-    }
-    @font-face {
-    font-family: "ElMessiri";
-    src: url("fonts\\ElMessiri-Regular.ttf");
-    } */
     body {
       background: linear-gradient(to right, #000000, #FF0000);
-      /* font-family: Arial, sans-serif; */
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -99,31 +91,38 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="birthayCards.html">بطاقات</a>
+        <a href="couples.html">تطقيماتنا</a>
     </div>
     <div class="container">
   <div class="card">
     <img src="path_to_image1.jpg" alt="Birthday Card 1" />
     <h2>Happy Birthday!</h2>
     <p>عيد ميلاد سعيد لكيلر الحلو</p>
-    <button onclick="changeMessage(this)">Change Message</button>
+    <button onclick="changeMessage(this)">غير الرسالة</button>
   </div>
 
   <div class="card">
     <img src="path_to_image2.jpg" alt="Birthday Card 2" />
     <h2>Celebrate!</h2>
-    <p>May your birthday be as amazing as you are!</p>
-    <button onclick="changeMessage(this)">Change Message</button>
+    <p>سنة سعيدة جميلة عليك تشبه جمالك</p>
+    <button onclick="changeMessage(this)">غير الرسالة</button>
   </div>
 
   <div class="card">
     <img src="path_to_image3.jpg" alt="Birthday Card 3" />
     <h2>Best Wishes!</h2>
-    <p>Sending you lots of love and good vibes on your special day!</p>
-    <button onclick="changeMessage(this)">Change Message</button>
+    <p>أتمنى لك حياة سعيدة  تحقق فيها كل أحلامك</p>
+    <button onclick="changeMessage(this)">غير الرسالة</button>
   </div>
+
+  <!-- <div class="card">
+    <img src="path_to_image3.jpg" alt="Birthday Card 4" />
+    <h2>Best Wishes!</h2>
+    <p></p>
+    <button onclick="changeMessage(this)">Change Message</button>
+  </div> -->
 </div>
   <script>
     const messages = {
