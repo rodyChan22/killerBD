@@ -20,13 +20,13 @@
       padding: 20px;
     }
     .container{
-        margin-top: 5%;;
+        margin-top: 5%;
     }
     .card {
       background-color: #FFFFFF;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      width: 300px;
+      width: 330px;
       height: 200px;
       margin: 20px;
       padding: 20px;
@@ -96,72 +96,43 @@
         <a href="couples.html">تطقيماتنا</a>
     </div>
     <div class="container">
-  <div class="card">
-    <img src="path_to_image1.jpg" alt="Birthday Card 1" />
-    <h2>Happy Birthday!</h2>
-    <p>عيد ميلاد سعيد لكيلر الحلو</p>
-    <button onclick="changeMessage(this)">غير الرسالة</button>
-  </div>
-
-  <div class="card">
-    <img src="path_to_image2.jpg" alt="Birthday Card 2" />
-    <h2>Celebrate!</h2>
-    <p>سنة سعيدة جميلة عليك تشبه جمالك</p>
-    <button onclick="changeMessage(this)">غير الرسالة</button>
-  </div>
-
-  <div class="card">
-    <img src="path_to_image3.jpg" alt="Birthday Card 3" />
-    <h2>Best Wishes!</h2>
-    <p>أتمنى لك حياة سعيدة  تحقق فيها كل أحلامك</p>
-    <button onclick="changeMessage(this)">غير الرسالة</button>
-  </div>
-
-  <!-- <div class="card">
-    <img src="path_to_image3.jpg" alt="Birthday Card 4" />
-    <h2>Best Wishes!</h2>
-    <p></p>
-    <button onclick="changeMessage(this)">Change Message</button>
-  </div> -->
+      <div class="card">
+        <img src="css/images/goko2.png" alt="Birthday Card 1" />
+        <h2>عيد ميلاد سعيد لكيلر الحلو سنة سعيدة جميلة عليك تشبه جمالك</h2>
+        <button onclick="changeMessage1()">غير الرسالة</button>
+      </div>
+    
+      <div class="card">
+        <img src="css/images/levi.png" alt="Birthday Card 2" />
+        <h2>كل سنة وأنت طيب كلورتي ، كل سنة وأنت بخير، كل سنة وأنت أجمل وأطيب ومن أقرب الأشخاص لقلبي.</h2>
+        <button onclick="changeMessage2()">غير الرسالة</button>
+      </div>
+    
+      <div class="card">
+        <img src="css/images/kimetsu.png" alt="Birthday Card 3" />
+        <h2>أتمنى لك سنة سعيدة، مليانة فرح وسعادة وحب، وتحقق كل إلي تحلم فيه.</h2>
+        <button onclick="changeMessage3()">غير الرسالة</button>
+      </div>
+      <div class="card">
+        <img src="css/images/naroto.png" alt="Birthday Card 4" />
+        <h2>أنت شخص رائع، وأتمنى لك كل التوفيق في كل ما تفعله.</h2>
+        <button onclick="changeMessage4()">غير الرسالة</button>
+      </div>
 </div>
-  <script>
-    const messages = {
-      "Happy Birthday!": {
-        heading: "Have a Wonderful Day!",
-        content: "May your day be filled with laughter and special moments!"
-      },
-      "Celebrate!": {
-        heading: "Party Time!",
-        content: "Wishing you an unforgettable birthday celebration!"
-      },
-      "Best Wishes!": {
-        heading: "Sending Love!",
-        content: "May this year bring you happiness and success!"
-      }
-    };
 
-    function changeMessage(button) {
-    const card = button.parentNode;
-    const h2 = card.querySelector("h2");
-    const p = card.querySelector("p");
-    const img = card.querySelector("img");
-    const currentHeading = h2.innerHTML;
-    const currentParagraph = p.innerHTML;
-    const originalHeading = card.dataset.originalHeading;
-
-    if (originalHeading) {
-        h2.innerHTML = originalHeading;
-        p.innerHTML = messages[originalHeading].content;
-        img.src = `path_to_image_${originalHeading.toLowerCase().replace(/\s/g, '_')}.jpg`;
-        card.removeAttribute("data-original-heading");
-    } 
-    else {
-        card.dataset.originalHeading = currentHeading;
-        h2.innerHTML = messages[currentHeading].heading;
-        p.innerHTML = messages[currentHeading].content;
-        img.src = `path_to_image_${currentHeading.toLowerCase().replace(/\s/g, '_')}.jpg`;
-    }
-}
-  </script>
+<script>
+  function changeMessage1(){
+    document.getElementsByTagName('h2')[0].innerHTML = "May your day be filled with laughter and special moments";
+  }
+  function changeMessage2(){
+    document.getElementsByTagName('h2')[1].innerHTML = "Wishing you an unforgettable birthday celebration";
+  }
+  function changeMessage3(){
+    document.getElementsByTagName('h2')[2].innerHTML = "May this year bring you happiness and success";
+  }
+  function changeMessage4(){
+    document.getElementsByTagName('h2')[3].innerHTML = "Wishing you a very happy birthday";
+  }
+</script>
 </body>
 </html>
