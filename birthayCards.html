@@ -1,18 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Mooli&family=Poppins:wght@300&display=swap" rel="stylesheet">
   <title>Birthday Cards</title>
   <style>
+    *{
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Mooli', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    }
+    /* * {
+        font-family: "ElMessiri";
+    }
+    @font-face {
+    font-family: "ElMessiri";
+    src: url("fonts\\ElMessiri-Regular.ttf");
+    } */
     body {
-      background: linear-gradient(to bottom, #000000, #FF0000);
-      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #000000, #FF0000);
+      /* font-family: Arial, sans-serif; */
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       padding: 20px;
     }
-
+    .container{
+        margin-top: 5%;;
+    }
     .card {
       background-color: #FFFFFF;
       border-radius: 10px;
@@ -26,6 +43,7 @@
       justify-content: space-between;
       align-items: center;
       text-align: center;
+      margin-bottom: 10%;
     }
 
     .card img {
@@ -43,27 +61,108 @@
 
     .card p {
       color: #666666;
+      font-size: 16px;
+    }
+
+    .card button {
+      background-color: #FF0000;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 16px;
       font-size: 14px;
+      cursor: pointer;
+    }
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
     }
   </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="container">
   <div class="card">
     <img src="path_to_image1.jpg" alt="Birthday Card 1" />
     <h2>Happy Birthday!</h2>
-    <p>Wishing you a day filled with joy and happiness!</p>
+    <p>عيد ميلاد سعيد لكيلر الحلو</p>
+    <button onclick="changeMessage(this)">Change Message</button>
   </div>
 
   <div class="card">
     <img src="path_to_image2.jpg" alt="Birthday Card 2" />
     <h2>Celebrate!</h2>
     <p>May your birthday be as amazing as you are!</p>
+    <button onclick="changeMessage(this)">Change Message</button>
   </div>
 
   <div class="card">
     <img src="path_to_image3.jpg" alt="Birthday Card 3" />
     <h2>Best Wishes!</h2>
     <p>Sending you lots of love and good vibes on your special day!</p>
+    <button onclick="changeMessage(this)">Change Message</button>
   </div>
+</div>
+  <script>
+    const messages = {
+      "Happy Birthday!": {
+        heading: "Have a Wonderful Day!",
+        content: "May your day be filled with laughter and special moments!"
+      },
+      "Celebrate!": {
+        heading: "Party Time!",
+        content: "Wishing you an unforgettable birthday celebration!"
+      },
+      "Best Wishes!": {
+        heading: "Sending Love!",
+        content: "May this year bring you happiness and success!"
+      }
+    };
+
+    function changeMessage(button) {
+    const card = button.parentNode;
+    const h2 = card.querySelector("h2");
+    const p = card.querySelector("p");
+    const img = card.querySelector("img");
+    const currentHeading = h2.innerHTML;
+    const currentParagraph = p.innerHTML;
+    const originalHeading = card.dataset.originalHeading;
+
+    if (originalHeading) {
+        h2.innerHTML = originalHeading;
+        p.innerHTML = messages[originalHeading].content;
+        img.src = `path_to_image_${originalHeading.toLowerCase().replace(/\s/g, '_')}.jpg`;
+        card.removeAttribute("data-original-heading");
+    } 
+    else {
+        card.dataset.originalHeading = currentHeading;
+        h2.innerHTML = messages[currentHeading].heading;
+        p.innerHTML = messages[currentHeading].content;
+        img.src = `path_to_image_${currentHeading.toLowerCase().replace(/\s/g, '_')}.jpg`;
+    }
+}
+  </script>
 </body>
 </html>
