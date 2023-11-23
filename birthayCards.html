@@ -26,8 +26,8 @@
       background-color: #FFFFFF;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      width: 330px;
-      height: 200px;
+      width: 370px;
+      height: 230px;
       margin: 20px;
       padding: 20px;
       display: flex;
@@ -104,19 +104,34 @@
     
       <div class="card">
         <img src="css/images/levi.png" alt="Birthday Card 2" />
-        <h2>كل سنة وأنت طيب كلورتي ، كل سنة وأنت بخير، كل سنة وأنت أجمل وأطيب ومن أقرب الأشخاص لقلبي.</h2>
+        <h2>كل سنة وأنت طيب كلورتي ، كل سنة وأنت بخير، كل سنة وأنت أجمل وأطيب ومن أقرب الأشخاص لقلبي</h2>
         <button onclick="changeMessage2()">غير الرسالة</button>
       </div>
     
       <div class="card">
         <img src="css/images/kimetsu.png" alt="Birthday Card 3" />
-        <h2>أتمنى لك سنة سعيدة، مليانة فرح وسعادة وحب، وتحقق كل إلي تحلم فيه.</h2>
+        <h2>أتمنى لك سنة سعيدة، مليانة فرح وسعادة وحب، وتحقق كل إلي تحلم فيه</h2>
         <button onclick="changeMessage3()">غير الرسالة</button>
       </div>
       <div class="card">
         <img src="css/images/naroto.png" alt="Birthday Card 4" />
-        <h2>أنت شخص رائع، وأتمنى لك كل التوفيق في كل ما تفعله.</h2>
+        <h2>أنت شخص رائع، وأتمنى لك كل التوفيق في كل ما تفعله</h2>
         <button onclick="changeMessage4()">غير الرسالة</button>
+      </div>
+      <div class="card">
+        <img src="css/images/iskradd.png" alt="Birthday Card 5" />
+        <h2>في مثل هذا اليوم قُدِّر للأرض أن تحتضن قلباً صافياً لينشر البهجة في حياة كل من يعرفونه، فكل عام وانت بخير. حقق الله أمانيك، وجمّل أيامك، وزيّن طريقك دائما بالخير والتوفيق دائماً</h2>
+        <button onclick="changeMessage5()">غير الرسالة</button>
+      </div>
+      <div class="card">
+        <img src="css/images/itachi.png" alt="Birthday Card 6" />
+        <h2>يا ريح الورد يا صوت القصيد يا ضحكة الماضي الجديد، يجعل عيدك دايم سعيد</h2>
+        <button onclick="changeMessage6()">غير الرسالة</button>
+      </div>
+      <div class="card">
+        <img src="css/images/madara.png" alt="Birthday Card 7" />
+        <h2>أنت شخص رائع، وأتمنى لك كل التوفيق في كل ما تفعله</h2>
+        <button onclick="changeMessage7()">غير الرسالة</button>
       </div>
 </div>
 
@@ -132,6 +147,15 @@
   }
   function changeMessage4(){
     document.getElementsByTagName('h2')[3].innerHTML = "Wishing you a very happy birthday";
+  }
+  function changeMessage5(){
+    document.getElementsByTagName('h2')[4].innerHTML = "May your birthday be as bright and beautiful as you are. Enjoy your special day";
+  }
+  function changeMessage6(){
+    document.getElementsByTagName('h2')[5].innerHTML = "On your birthday, I hope you're surrounded by loved ones and showered with love and blessings";
+  }
+  function changeMessage7(){
+    document.getElementsByTagName('h2')[6].innerHTML = "Here's to another year of laughter, love, and cherished moments. Happy birthday";
   }
 </script>
 </body>
